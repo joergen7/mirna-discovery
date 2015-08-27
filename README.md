@@ -22,7 +22,7 @@ enter the following:
     kitchen converge
 
 
-## Workflow loaction
+## Workflow Location
 
 The workflow itself can be found in the cookbook under
 
