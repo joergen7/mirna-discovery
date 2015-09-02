@@ -1,3 +1,11 @@
-deftask test(:) in bash *{
-  test
+urls="http://" "" "" "" "" "" "" "" "" "" "" "";
+samples=getReads(urls:urls);
+samplesfq=convert2fastq(samples);
+
+deftask getReads(<samples(File)>:<urls>) in bash *{
+  samples=wget(${urls[@]})
+}*
+
+deftask convert2fastq(<fqfiles(File)>:<srafiles(File)>) in bash *{
+  fqfiles=srafiles
 }*
