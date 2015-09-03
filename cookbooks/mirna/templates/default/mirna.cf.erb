@@ -19,3 +19,9 @@ deftask convert2fastq(fqfile(File):srafile(File)) in bash *{
   fastq-dump.2.5.2 --split-3 $srafile
   fqfile=${srafile}.fastq
 }*
+
+deftask qualityCheck(qcResult(File):fqFile(File)) in bash *{
+  fastqc $fqFile --noextract
+  fileName=$(basename $fqFile)
+  qcResult=${fileName%.*}"_fastqc.zip"
+}*
