@@ -1,8 +1,17 @@
 urls="http://" "" "" "" "" "" "" "" "" "" "" "";
-samples=getReads(urls:urls);
+samples=download(urls:urls);
 samplesfq=convert2fastq(samples);
+expectedContaminatingGenomeURLs="" "" "" "" "";
+expectedContaminationgGenomes(File)=download(sample:expectedContaminatingGenomeURLs);
+targetGenomeURLs="";
+targetGenomeFiles=download(sample:targetGenomeURLs);
+decoyGenomeFiles=shuffle(input:targetGenomeFiles);
 
-deftask getReads(sample(File):url) in bash *{
+deftask shuffle(decoy(File):input(File)) in bash *{
+  decoy=input
+}*
+
+deftask download(sample(File):url) in bash *{
   sample=wget($urls)
 }*
 
