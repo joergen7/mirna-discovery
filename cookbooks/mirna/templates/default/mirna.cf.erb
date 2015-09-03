@@ -16,5 +16,6 @@ deftask download(sample(File):url) in bash *{
 }*
 
 deftask convert2fastq(fqfile(File):srafile(File)) in bash *{
-  fqfile=srafile
+  fastq-dump.2.5.2 $srafile
+  fqfile=${srafile}.fastq
 }*
