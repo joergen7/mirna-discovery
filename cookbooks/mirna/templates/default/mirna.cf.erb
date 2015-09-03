@@ -2,10 +2,10 @@ urls="http://" "" "" "" "" "" "" "" "" "" "" "";
 samples=getReads(urls:urls);
 samplesfq=convert2fastq(samples);
 
-deftask getReads(<samples(File)>:<urls>) in bash *{
-  samples=wget(${urls[@]})
+deftask getReads(sample(File):url) in bash *{
+  sample=wget($urls)
 }*
 
-deftask convert2fastq(<fqfiles(File)>:<srafiles(File)>) in bash *{
-  fqfiles=srafiles
+deftask convert2fastq(fqfile(File):srafile(File)) in bash *{
+  fqfile=srafile
 }*
