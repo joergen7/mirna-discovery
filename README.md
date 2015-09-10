@@ -42,4 +42,4 @@ Log into the test machine by typing
     
 Now, execute the workflow script by entering
 
-    cuneiform -w /opt wf/mirna.cf
+    cuneiform -w /opt /opt/wf/mirna.cf
