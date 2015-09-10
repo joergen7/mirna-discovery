@@ -32,3 +32,12 @@ The workflow itself can be found in the cookbook under
 and on the test machine under
 
     /opt/wf/mirna.cf
+    
+Log into the test machine by typing
+
+    kitchen login
+    
+Now, execute the workflow script by entering
+
+    cd /opt
+    cuneiform wf/mirna.cf

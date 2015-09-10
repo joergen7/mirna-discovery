@@ -14,5 +14,6 @@ suites:
       - recipe[mirna::_common]
       - recipe[chef-bioinf-worker::fastqc]
       - recipe[chef-bioinf-worker::sratools]
+      - recipe[chef-cuneiform::default]
       - recipe[mirna::default]
     attributes:
