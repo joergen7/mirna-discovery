@@ -32,7 +32,10 @@ The workflow itself can be found in the cookbook under
 and on the test machine under
 
     /opt/wf/mirna.cf
+
     
+## Workflow execution
+
 Log into the test machine by typing
 
     kitchen login
