@@ -11,7 +11,7 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[chef-bioinf-worker::_common]
+      - recipe[mirna::_common]
       - recipe[chef-bioinf-worker::fastqc]
       - recipe[chef-bioinf-worker::sratools]
       - recipe[mirna::default]
