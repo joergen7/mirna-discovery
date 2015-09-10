@@ -19,6 +19,7 @@ To initialize the test machine in the directory
 
 enter the following:
 
+    berks update
     kitchen converge
 
 

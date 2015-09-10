@@ -6,11 +6,13 @@ provisioner:
   name: chef_zero
 
 platforms:
-  - name: ubuntu-12.04
-  - name: centos-6.5
+  - name: ubuntu-14.04
 
 suites:
   - name: default
     run_list:
+      - recipe[chef-bioinf-worker::_common]
+      - recipe[chef-bioinf-worker::fastqc]
+      - recipe[chef-bioinf-worker::sratools]
       - recipe[mirna::default]
     attributes:
