@@ -13,10 +13,6 @@ To install it enter on the command line
 
     sudo dpkg -i chefdk_*.deb
 
-To initialize the test machine in the directory
-
-    cookbooks/mirna
-
 enter the following:
 
     berks update
