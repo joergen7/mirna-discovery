@@ -1,0 +1,15 @@
+DEPENDENCIES
+  chef-bioinf-worker
+    git: git://github.com/joergen7/chef-bioinf-worker.git
+    revision: ef0ed416d21d216f84855d9265fc6e612a306bb1
+  chef-cuneiform
+    git: git://github.com/joergen7/chef-cuneiform.git
+    revision: ef5abc1ede73fd92fb35d4c7dea19c5a31111189
+  mirna
+    path: .
+    metadata: true
+
+GRAPH
+  chef-bioinf-worker (0.1.0)
+  chef-cuneiform (0.1.0)
+  mirna (0.1.0)
