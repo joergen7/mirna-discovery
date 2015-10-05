@@ -4,6 +4,10 @@
 #
 # Copyright (c) 2015 Jörgen Brandt, Caner Bagci, Jens Allmer, All Rights Reserved.
 
+include_recipe "chef-bioinf-worker::fastqc"
+include_recipe "chef-bioinf-worker::sratools"
+include_recipe "chef-cuneiform::default"
+
 read_dir = "#{node.dir.data}/reads"
 
 directory node.dir.wf
